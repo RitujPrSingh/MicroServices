@@ -9,9 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path="/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class AccountsController {
 	
-	@GetMapping("sayHello")
-	public String sayHello() {
-		return "Hello World";
-	}
 	
 }
