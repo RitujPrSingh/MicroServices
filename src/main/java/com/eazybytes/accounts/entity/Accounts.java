@@ -6,18 +6,55 @@ import lombok.*;
 @Entity
 @Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
 public class Accounts extends BaseEntity {
-	
-	@Column(name = "customer_id")
+
 	private Long customerID;
-	
-	@Column(name = "account_number")
+
 	@Id
 	private Long accountNumber;
 	
-	@Column(name = "account_type")
 	private String accountType;
 	
-	@Column(name = "branch_address")
 	private String branchAddress;
+
+	public Long getCustomerID() {
+		return customerID;
+	}
+
+
+	public void setCustomerID(Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public Long getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(Long accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
+	public String getBranchAddress() {
+		return branchAddress;
+	}
+
+	public void setBranchAddress(String branchAddress) {
+		this.branchAddress = branchAddress;
+	}
+
+	@Override
+	public String toString() {
+		return "Accounts [customerID=" + customerID + ", accountNumber=" + accountNumber + ", accountType="
+				+ accountType + ", branchAddress=" + branchAddress + "]";
+	}
+
+	
 
 }
