@@ -1,13 +1,21 @@
 package com.eazybytes.accounts.dto;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public class AccountsDto {
 	
+	@NotEmpty(message = "Account Number must not be null or empty")
 	private Long accountNumber;
 	
 	private String accountType;
 	
 	private String branchAddress;
 	
+
+	
+	public AccountsDto() {
+		super();
+	}
 
 	public AccountsDto(Long accountNumber, String accountType, String branchAddress) {
 		super();
